@@ -173,7 +173,7 @@ public class Send_message extends AppCompatActivity {
                     @RequiresApi(api = Build.VERSION_CODES.O)
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(reciever.isEmpty() || dataSnapshot.hasChild(reciever)== false )
+                        if(reciever.isEmpty() || !dataSnapshot.hasChild(reciever))
                         {
                             user.setError("Enter a valid user-id");
                             user.requestFocus();
